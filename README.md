@@ -16,9 +16,9 @@ These linting rules work on both `.sass` and `.scss` files, though if you are us
 
 1. `npm install --save-dev tjw-sasslint-rules sass-lint sass-lint-auto-fix node-sass`
 1. In the `"scripts":` section of your `package.json` add in these two lines:
- * `"sasslint": "sass-lint -c node_modules/tjw-sasslint-rules/tjwsasslint.yml '**/*.sass, **/*.scss' -v -f table",`
- * `"sassfix": "sass-lint-auto-fix '**/*.sass, **/*.scss' -c node_modules/tjw-sasslint-rules/tjwsasslint.yml"`
- * **Note:** You can change the `'**/*.sass, **/*.scss'` to be specific to your project's Sass folder. Example: `'src/sass/**/*.sass, src/sass/**/*.scss'`
+   * `"sasslint": "sass-lint -c node_modules/tjw-sasslint-rules/tjwsasslint.yml '**/*.sass, **/*.scss' -v -f table",`
+   * `"sassfix": "sass-lint-auto-fix '**/*.sass, **/*.scss' -c node_modules/tjw-sasslint-rules/tjwsasslint.yml"`
+   * **Note:** You can change the `'**/*.sass, **/*.scss'` to be specific to your project's Sass folder. Example: `'src/sass/**/*.sass, src/sass/**/*.scss'`
 1. `npm run sassfix` - This will automatically fix anything it can in accordance with the rules
 1. `npm run sasslint` - This will show you the remaining lines of code in violation of the linting rules for you to manually correct.
 
@@ -28,17 +28,17 @@ These linting rules work on both `.sass` and `.scss` files, though if you are us
 Because of a [bug in Sass-Lint](https://github.com/sasstools/sass-lint/issues/1192), Windows machines cannot pass in the location of their Sass files in the CLI. The only work around is to set the value in a `yml` file.
 
 1. Create a file called `.sass-lint.yml` and set it up like so:
-```yml
-options:
-  config-file: node_modules/tjw-sasslint-rules/tjwsasslint.yml
-files:
-  # Note: You can change the '**/*.s+(a|c)ss' to be specific to your project's Sass folder. Example: 'src/sass/**/*.s+(a|c)ss'
-  include: '**/*.s+(a|c)ss'
-```
+   ```yml
+   options:
+     config-file: node_modules/tjw-sasslint-rules/tjwsasslint.yml
+   files:
+     # Note: You can change the '**/*.s+(a|c)ss' to be specific to your project's Sass folder. Example: 'src/sass/**/*.s+(a|c)ss'
+     include: '**/*.s+(a|c)ss'
+   ```
 1. `npm install --save-dev tjw-sasslint-rules sass-lint sass-lint-auto-fix node-sass`
 1. In the `"scripts":` section of your `package.json` add in these two lines:
- * `"sasslint": "sass-lint -c .sass-lint.yml -v -f table",`
- * `"sassfix": "sass-lint-auto-fix -c .sass-lint.yml"`
+   * `"sasslint": "sass-lint -c .sass-lint.yml -v -f table",`
+   * `"sassfix": "sass-lint-auto-fix -c .sass-lint.yml"`
 1. `npm run sassfix` - This will automatically fix anything it can in accordance with the rules.
 1. `npm run sasslint` - This will show you the remaining lines of code in violation of the linting rules for you to manually correct.
 
@@ -91,8 +91,8 @@ files:
 ### How you can help
 
 1. First and foremost, contribute to the other tools that this uses:
- * https://github.com/sasstools/sass-lint
- * https://github.com/srowhani/sass-lint-auto-fix
- * Specifically, see if you can fix [this bug](https://github.com/sasstools/sass-lint/issues/1192), or improve any part of the auto-fixer to fix more things, or to not require being re-ran multiple times.
+   * https://github.com/sasstools/sass-lint
+   * https://github.com/srowhani/sass-lint-auto-fix
+   * Specifically, see if you can fix [this bug](https://github.com/sasstools/sass-lint/issues/1192), or improve any part of the auto-fixer to fix more things, or to not require being re-ran multiple times.
 1. If you find any CSS properties missing from this rule-set, [report it](https://github.com/TheJaredWilcurt/tjw-sasslint-rules/issues).
 1. Use `.sass` syntax in your code examples online.
