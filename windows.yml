@@ -1,0 +1,4 @@
+options:
+  config-file: tjwsasslint.yml
+files:
+  include: '**/*.s+(a|c)ss'

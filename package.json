@@ -1,0 +1,39 @@
+{
+  "name": "tjw-sasslint-rules",
+  "version": "1.0.0",
+  "description": "The Jared Wilcurt's Sass linting rules",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run sasslint",
+    "sasslint": "sass-lint -c tjwsasslint.yml '**/*.sass, **/*.scss' -v -f table",
+    "sasslint2": "sass-lint -c node_modules/tjw-sasslint-rules/tjwsasslint.yml '**/*.sass, **/*.scss' -v -f table",
+    "winlint": "sass-lint -c windows.yml -v -f table",
+    "sassfix": "sass-lint-auto-fix '**/*.sass, **/*.scss' -c tjwsasslint.yml",
+    "sassfix2": "sass-lint-auto-fix '**/*.sass, **/*.scss' -c node_modules/tjw-sasslint-rules/tjwsasslint.yml",
+    "winfix": "sass-lint-auto-fix -c windows.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheJaredWilcurt/tjw-sasslint-rules.git"
+  },
+  "keywords": [
+    "Sass",
+    "Lint",
+    "sass-lint",
+    "linting",
+    "rules",
+    "SCSS",
+    "CSS"
+  ],
+  "author": "The Jared Wilcurt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheJaredWilcurt/tjw-sasslint-rules/issues"
+  },
+  "homepage": "https://github.com/TheJaredWilcurt/tjw-sasslint-rules#readme",
+  "devDependencies": {
+    "node-sass": "4.x.x",
+    "sass-lint": "1.x.x",
+    "sass-lint-auto-fix": "0.x.x"
+  }
+}
