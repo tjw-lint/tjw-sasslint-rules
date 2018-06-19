@@ -14,6 +14,8 @@ These linting rules work on both `.sass` and `.scss` files, though if you are us
 
 ## How to use this:
 
+### Linux/OSX Instructions
+
 1. `npm install --save-dev tjw-sasslint-rules sass-lint sass-lint-auto-fix node-sass`
 1. In the `"scripts":` section of your `package.json` add in these two lines:
    * `"sasslint": "sass-lint -c node_modules/tjw-sasslint-rules/tjwsasslint.yml '**/*.sass, **/*.scss' -v -f table",`
@@ -23,7 +25,7 @@ These linting rules work on both `.sass` and `.scss` files, though if you are us
 1. `npm run sasslint` - This will show you the remaining lines of code in violation of the linting rules for you to manually correct.
 
 
-## Windows Instructions
+### Windows Instructions
 
 Because of a [bug in Sass-Lint](https://github.com/sasstools/sass-lint/issues/1192), Windows machines cannot pass in the location of their Sass files in the CLI. The only work around is to set the value in a `yml` file.
 
