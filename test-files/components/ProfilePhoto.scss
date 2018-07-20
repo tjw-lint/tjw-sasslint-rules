@@ -1,0 +1,25 @@
+.ProfilePhoto {
+    align-items: center;
+    background: #eee;
+    display: flex;
+    height: 64px;
+    justify-content: center;
+    @include border-radius(64px);
+    overflow: hidden;
+    width: 64px;
+
+    img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    &--large {
+        height: 128px;
+        width: 128px;
+    }
+
+    &--small {
+        height: 32px;
+        width: 32px;
+    }
+}

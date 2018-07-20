@@ -1,0 +1,69 @@
+/*
+ *  Methodologies for this Project
+ *
+ *
+ *  ITCSS
+ *  https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+ *
+ *  Stands for Inverted Triangle CSS and it helps you to organize your
+ *  project CSS files in such way that you can better deal with
+ *  (not always easy-to-deal with) CSS specifics like global
+ *  namespace, cascade and selectors specificity.
+ *
+ *
+ *  BEM
+ *  http://getbem.com/introduction/
+ *
+ *  Stands for Block Element Modifier and helps to avoid inheritance,
+ *  provides some sort of scope by using unique CSS classes per
+ *  element (like .Button__icon--active), and reduces style
+ *  conflicts by keeping CSS specificity to a minimum level.
+ */
+
+
+/*
+ *  Variables, Fonts, Colors, Definitions, Branding
+ */
+@import "settings/index";
+
+
+/*
+ *  Global mixins and functions.
+ */
+@import "tools/index";
+
+
+/*
+ *  Reset Stylesheets, first layer of CSS.
+ */
+@import "generic/index";
+
+
+/*
+ *  Styling of Bare elements like H1, p, a, etc.
+ */
+@import "elements/index";
+
+
+/*
+ *  Class-based selectors which define undecorated
+ *  design patterns, for example media object
+ *  known from OOCSS.
+ */
+@import "objects/index";
+
+
+/*
+ *  Specific UI components. This is where majority
+ *  of our work takes place and our UI components
+ *  are often composed of Objects and Components.
+ */
+@import "components/index";
+
+
+/*
+ *  Helper classes with ability to override
+ *  anything which goes before in the
+ *  triangle, eg. hide helper class.
+ */
+@import "utilities/index";

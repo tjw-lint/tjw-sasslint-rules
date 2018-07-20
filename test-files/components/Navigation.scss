@@ -1,0 +1,34 @@
+.Navigation {
+
+    &__con {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        a {
+            align-items: center;
+            background: rgba($primary-color, 0.08);
+            border: rgba(desaturate($primary-color, 50%), 0.5) solid 1px;
+            color: $primary-color;
+            display: flex;
+            height: 48px;
+            justify-content: center;
+            margin-left: 8px;
+            padding: 0 20px;
+            text-decoration: none;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:hover {
+                background: #fff;
+            }
+            
+            &.active {
+                background: $primary-color;
+                color: #fff;
+            }
+        }
+    }
+}

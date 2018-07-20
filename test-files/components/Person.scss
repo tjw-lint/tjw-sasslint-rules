@@ -1,0 +1,114 @@
+.Person {
+
+    &__con {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__navigate {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            align-items: center;
+            background: rgba($secondary-color, 0.25);
+            border: darken($secondary-color, 10%) solid 1px;
+            color: darken($secondary-color, 50%);
+            display: flex;
+            height: 34px;
+            justify-content: center;
+            padding: 0 12px;
+
+            i {
+                margin: 0 8px;
+            }
+
+            &:first-child {
+                padding-left: 2px;
+            }
+
+            &:last-child {
+                padding-right: 2px;
+            }
+
+            &:hover {
+                background: $secondary-color;
+            }
+
+            &:disabled {
+                background: #eee;
+                border-color: #ccc;
+                color: #ccc;
+                cursor: default;
+            }
+        }
+    }
+}
+
+.PersonSidebar {
+    max-width: 280px;
+    width: 50%;
+
+    &__con {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__details {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0 0;
+
+        a {
+            border-top: $border__base-color solid 1px;
+            color: $primary-color;
+            display: flex;
+            padding: 8px 4px 6px;
+            text-decoration: none;
+
+            &:first-child {
+                border-top: 0;
+            }
+
+            &:hover {
+                background: rgba($primary-color, 0.05);
+            }
+
+            &.active {
+                background: $primary-color;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.PersonView {
+    width: 100%;
+
+    &__con {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.PersonViewContact {
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        strong {
+
+        }
+
+        span {
+
+        }
+    }
+}

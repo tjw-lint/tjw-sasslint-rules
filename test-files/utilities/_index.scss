@@ -1,0 +1,22 @@
+.wrap {
+    margin: 0 auto;
+    max-width: $body__width--desktop;
+    @extend %clearfix;
+}
+.al {text-align: left;}
+.ac {text-align: center;}
+.ar {text-align: right;}
+.fl {float: left;}
+.fr {float: right;}
+.hidden {display: none ;visibility: hidden;} /* Hide from both screenreaders and browsers */
+.invisible {visibility: hidden;} /* Hide visually and from screenreaders, but maintain layout */
+.noscroll {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    width: 100%;
+}

@@ -1,4 +1,7 @@
 options:
   config-file: tjwsasslint.yml
+  formatter: json
+  max-warnings: 5000
 files:
   include: '**/*.s+(a|c)ss'
+

@@ -1,0 +1,8 @@
+node_modules/
+test-files/
+.editorconfig
+.gitignore
+.travis.yml
+package-lock.json
+test.js
+windows.yml

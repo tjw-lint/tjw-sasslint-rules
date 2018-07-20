@@ -4,7 +4,7 @@
   "description": "The Jared Wilcurt's Sass linting rules",
   "main": "index.js",
   "scripts": {
-    "test": "npm run sasslint",
+    "test": "node test.js",
     "sasslint": "sass-lint -c tjwsasslint.yml '**/*.sass, **/*.scss' -v -f table",
     "sasslint2": "sass-lint -c node_modules/tjw-sasslint-rules/tjwsasslint.yml '**/*.sass, **/*.scss' -v -f table",
     "winlint": "sass-lint -c windows.yml -v -f table",

@@ -1,0 +1,47 @@
+
+/*
+ *  NProgress Bar Colors
+ */
+
+    $pbar__bar-color: $primary-color;
+    $pbar__blur-color: $primary-color;
+    $pbar__spin-color: $primary-color;
+
+
+
+/*
+ *  User Select / Text Highlight
+ */
+
+    $highlight-selection: #000;
+    $highlight-font-color: #fff;
+
+
+
+/*
+ *  Colors for other variables
+ */
+
+    // default border color
+    $border__base-color: #ccc;
+
+    // default horizontal rule color
+    $hr-color: #fff;
+
+
+
+/*
+ *  Styling for HTML and Body elements
+ */
+
+    @mixin html() {
+        background-color: $html__bgcolor;
+        overflow-y: scroll;
+    }
+
+    @mixin body() {
+        background-color: $body__bgcolor;
+    }
+
+
+

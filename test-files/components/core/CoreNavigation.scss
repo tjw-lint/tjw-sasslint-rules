@@ -1,0 +1,39 @@
+.CoreNavigation {
+
+    &__actions {
+        display: flex;
+        flex-direction: row;
+
+        button {
+            align-items: center;
+            border: $border__base-color solid 1px;
+            border-left: 0;
+            color: $font__base-color;
+            display: flex;
+            height: 32px;
+            justify-content: center;
+            outline: none;
+
+            i {
+                margin: 0 5px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            &:first-child {
+                border-left: $border__base-color solid 1px;
+            }
+
+            &:hover {
+                background: #eee;
+                color: $primary-color;
+            }
+        }
+    }
+}

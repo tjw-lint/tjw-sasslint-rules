@@ -1,0 +1,61 @@
+
+/* Base Styles */
+html {
+    font-size: 62.5%;
+    min-height: 100%;
+
+    @include html();
+}
+body {
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-text-size-adjust: 100%;
+    line-height: 1;
+    min-height: 100%;
+
+    @include body();
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: $font__base-family;
+    color: $font__base-color;
+    font-style: $font__base-style;
+    @include font-size($font__base-size);
+}
+
+h1, h2, h3, h4, h5, h6 {
+}
+
+h1 {
+    @include font-size(30px);
+    line-height: 140%;
+}
+
+h2 {
+    @include font-size(22px);
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+h3 {
+    @include font-size(20px);
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+p {
+    line-height: 130%;
+    margin-bottom: 10px;
+    padding: 3px 0 2px;
+}
+
+hr {
+    border: 0;
+    border-top: $hr-color solid 1px;
+    margin: 30px 0;
+}

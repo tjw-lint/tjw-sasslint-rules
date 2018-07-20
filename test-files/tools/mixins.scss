@@ -1,0 +1,103 @@
+@function calculateRem($size) {
+    $remSize: $size / 10px;
+    @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+    font-size: $size; // fallback for browsers that do not support rem sizing
+    font-size: calculateRem($size);
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin placeholder($color) {
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        color:    $color;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color:    $color;
+        opacity:  1;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color:    $color;
+        opacity:  1;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color:    $color;
+    }
+}
+
+@mixin animation($str...) {
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    -webkit-animation: #{$str};
+    animation: #{$str};
+}
+
+@mixin transition($args...) {
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    -webkit-transition: $args;
+    transition: $args;
+}
+
+@mixin opacity($opacity) {
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie);
+    opacity: $opacity; //IE8
+}
+
+@mixin border-radius($radius) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    background-clip: padding-box;
+    border-radius: $radius;  /* stops bg color from leaking outside the border: */
+}
+
+/* Gradient: Top to Bottom */
+@mixin gradient-t2b($start-colour, $end-colour) {
+    background-color: $start-colour;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($start-colour), to($end-colour));
+    background-image: -webkit-linear-gradient(top, $start-colour, $end-colour);
+    background-image:    -moz-linear-gradient(top, $start-colour, $end-colour);
+    background-image:     -ms-linear-gradient(top, $start-colour, $end-colour);
+    background-image:      -o-linear-gradient(top, $start-colour, $end-colour);
+    background-image:         linear-gradient(top, $start-colour, $end-colour);
+    filter:            progid:DXImageTransform.Microsoft.gradient(start-colourStr='#{$start-colour}', end-colourStr='#{$end-colour}');
+}
+
+@mixin phone() {
+    @media screen and (max-width: 750px) {
+        @content
+    }
+}
+
+@mixin tablet() {
+    @media screen and (max-width: $body__width--tablet) {
+        @content
+    }
+}
+
+@mixin desktop() {
+    @media screen and (min-width: $body__width--desktop) {
+        @content
+    }
+}

@@ -1,0 +1,34 @@
+.Container {
+    position: relative ;
+    border: #ccc solid 1px;
+    box-shadow: 2px 4px 12px rgba(0,0,0,0);
+    margin: 20px ;
+    max-width: 100%;
+    padding: 40px 20px 20px ;
+
+    //&:hover {
+    //    box-shadow: 2px 4px 12px rgba(0,0,0,.25);
+    //    border-color: desaturate($primary-color, 50%);
+    //}
+
+    > code {
+        background: #f1f1f1;
+        border: #ccc solid 1px;
+        border-left: 0;
+        @include font-size(12px);
+        border-top: 0;
+        display: inline-flex;
+        flex-grow: 0;
+        flex-shrink: 1;
+        left: 0;
+        margin: 0 0 20px;
+        padding: 6px 8px 4px;
+        position: absolute;
+        top: 0;
+    }
+}
+
+body.Container {
+    border: 0;
+    margin: 0 ;
+}

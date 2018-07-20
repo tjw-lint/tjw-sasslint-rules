@@ -1,0 +1,82 @@
+
+/*
+ *  Base Animation Variables
+ */
+
+    // cubic bezier values
+    $bounce-v1: 0.175, 0.885, 0.32, 1.275;
+    $bounce-v2: .71,.52,.22,1.04;
+
+    // cubic bezier
+    $animate__cubic-bezier: cubic-bezier(.82,.01,.32,1);
+    $animate__cubic-bezier--enter: cubic-bezier(.71,.52,.22,1.04);
+    $animate__cubic-bezier--leave: cubic-bezier(.83,-0.34,.19,1.23);
+
+    // slide
+    $slide-duration: 300ms;
+
+
+
+/*
+ * Slide Left
+ *
+ * ...
+ */
+
+    .slide-left-enter-active, .slide-left-leave-active {
+        transition: transform $slide-duration cubic-bezier(1, 0.5, 0.8, 1),
+        opacity $slide-duration cubic-bezier(1, 0.5, 0.8, 1);
+    }
+
+    .slide-left-enter {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    .slide-left-enter-to, .slide-left-leave {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .slide-left-leave-to {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+
+
+
+/*
+ * Slide Right
+ *
+ * ...
+ */
+
+    .slide-right-enter-active, .slide-right-leave-active {
+        transition: transform $slide-duration cubic-bezier(1, 0.5, 0.8, 1),
+        opacity $slide-duration cubic-bezier(1, 0.5, 0.8, 1);
+    }
+
+    .slide-right-enter {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    .slide-right-enter-to, .slide-right-leave {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .slide-right-leave-to {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+
+
+
+    .slide-left-enter-active, .slide-left-leave-active,
+    .slide-right-enter-active, .slide-right-leave-active {
+        position: absolute;
+        top: 0;
+    }

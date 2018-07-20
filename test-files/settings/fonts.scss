@@ -1,0 +1,18 @@
+//@import url('https://fonts.googleapis.com/css?family=Oswald:200|Source+Sans+Pro:300,400,700');
+//@import "~@fortawesome/fontawesome-free-webfonts/scss/fontawesome";
+//$fa-font-path: '/webfonts';
+//@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-solid";
+//@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-regular";
+//@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-brands";
+
+$font__base-color: #444;
+$font__base-family: 'Source Sans Pro', 'Open Sans', Helvetica, Arial, Verdana, sans-serif;
+$font__base-size: 16px;
+$font__base-style: normal;
+
+$font__base-anchor-color: $primary-color;
+$font__base-anchor-hover-color: $secondary-color;
+
+$font__title-family: 'Oswald', 'Source Sans Pro', 'Open Sans', Helvetica, Arial, Verdana, sans-serif;
+$font__title-weight: 200;
+$font__title-letterspacing: -01rem;
