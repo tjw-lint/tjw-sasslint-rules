@@ -59,34 +59,39 @@ Because of a [bug in Sass-Lint](https://github.com/sasstools/sass-lint/issues/11
 * * *
 
 
-### Pros/Cons of Sass vs Scss vs CSS
+### Pros/Cons of Sass vs SCSS vs CSS
 
-**Benefits of Sass over Scss:**
+**Benefits of Sass over SCSS:**
 
 * Enforced coding format (indented syntax)
 * Consistency across all files
 * Less error proned especially during refactoring (due to lack of `{}`)
-* Faster to write due to auto-complete, and removal of `;` which can cause errors
+* Faster to write due removal of `{}` and `;`( which can cause errors)
 * Easier to read as it forces all files to look the same
 
-**Benefits of Scss over Sass:**
+**Benefits of SCSS over Sass:**
 
-* All valid CSS files are valid Scss files
-* Allows for a variety of control for how to display or structure styles (particularly useful for tabular-like data)
+* All valid CSS files are valid SCSS files
+* Allows for variety of control for how to display or structure rules (particularly useful for tabular-like data in rules)
 
-**Benefits of Sass or Scss over CSS:**
 
-* Automatic Concatenation and Minification on save
-* Modular code
-* Nesting
-* Precomputed Variables
-* Mixins and Mixin Libraries
+**Benefits of Sass or SCSS over CSS:**
+
+* Automatic concatenation and minification on save
+* Modular/Reusable code
+* Nesting (possibly coming to native CSS in the future)
+* Precomputed Variables (Live variables already exist in both)
+* Mixins and Mixin Libraries (See: [family.scss](https://lukyvj.github.io/family.scss/) for a good example)
 * Precomputed Math (`width: $height / 2;`)
 * Built in color functions (`color: desaturate(#F00, 20%);` or `color: rgba(#FCE, 0.5);`)
 * Custom Functions
 * Loops
-* Sass can be converted to Scss with no loss, or processed to CSS
-* Scss can be converted to Sass with no loss, or processed to CSS
+
+**Other Info:**
+
+* Sass can be converted to SCSS with no loss, or processed to CSS
+* SCSS can be converted to Sass with no loss, or processed to CSS
+* Sass, SCSS, and CSS all have auto-complete and syntax highlighting in all editors of merit
 
 
 * * *
