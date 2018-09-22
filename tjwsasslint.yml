@@ -75,11 +75,11 @@ rules:
         - right
         - bottom
         - left
-        # How the element is displayed
+        # How the element is displayed and layout
         - display
-        - align-content
-        - align-items
-        - align-self
+        - column-count
+        - column-gap
+        - column-width
         - flex
         - flex-basis
         - flex-direction
@@ -87,8 +87,29 @@ rules:
         - flex-grow
         - flex-shrink
         - flex-wrap
+        - align-content
+        - align-items
+        - align-self
         - justify-content
         - order
+        - grid
+        - grid-area
+        - grid-gap
+        - grid-template
+        - grid-template-areas
+        - grid-template-columns
+        - grid-template-rows
+        - grid-column
+        - grid-column-start
+        - grid-column-end
+        - grid-column-gap
+        - grid-row
+        - grid-row-start
+        - grid-row-end
+        - grid-row-gap
+        - grid-auto-columns
+        - grid-auto-rows
+        - grid-auto-flow
         # Overall size, max amount of pixels that can be painted
         - width
         - height
@@ -98,8 +119,11 @@ rules:
         - max-height
         # Effects the most amount of pixel paint in the element
         - background
+        - background-attachment
+        - background-clip
         - background-color
         - background-image
+        - background-origin
         - background-position
         - background-repeat
         - background-size
@@ -148,8 +172,8 @@ rules:
         - -webkit-font-smoothing
         - font-smoothing
         - font-style
-        - font-weight
         - font-variant
+        - font-weight
         - letter-spacing
         - line-height
         - list-style
@@ -160,6 +184,7 @@ rules:
         - src
         - text-align
         - text-decoration
+        - text-indent
         - text-overflow
         - text-rendering
         - text-shadow
@@ -168,28 +193,50 @@ rules:
         - unicode-range
         - white-space
         - word-break
+        - word-spacing
         # Less common properties go to the bottom
+        - animation
+        - animation-delay
+        - animation-direction
+        - animation-duration
+        - animation-fill-mode
+        - animation-iteration-count
+        - animation-name
+        - animation-play-state
+        - animation-timing-function
         - box-shadow
+        - box-sizing
         - clear
         - cursor
         - -webkit-filter
         - filter
         - float
+        - mix-blend-mode
         - opacity
         - outline
+        - outline-width
+        - outline-style
+        - outline-color
         - outline-offset
         - overflow
+        - overflow-wrap
         - overflow-x
         - overflow-y
         - perspective
         - pointer-events
+        - resize
         - -webkit-transform
         - transform
         - transform-origin
         - -webkit-transition
         - transition
+        - transition-delay
+        - transition-duration
+        - transition-property
+        - transition-timing-function
         - vertical-align
         - visibility
+        - will-change
         - z-index
   single-line-per-selector: 1
   space-after-bang:
