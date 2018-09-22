@@ -80,7 +80,7 @@ Because of a [bug in Sass-Lint](https://github.com/sasstools/sass-lint/issues/11
 * Automatic concatenation and minification on save
 * Modular/Reusable code
 * Nesting (possibly coming to native CSS in the future)
-* Precomputed Variables (Live variables already exist in both)
+* Precomputed Variables (Live variables already exist in Sass/SCSS/CSS)
 * Mixins and Mixin Libraries (See: [family.scss](https://lukyvj.github.io/family.scss/) for a good example)
 * Precomputed Math (`width: $height / 2;`)
 * Built in color functions (`color: desaturate(#F00, 20%);` or `color: rgba(#FCE, 0.5);`)
