@@ -76,7 +76,7 @@ results.forEach(function (result) {
 // COMPARE AGAINST EXPECTATIONS
 
 const expectedErrors = 184;
-const expectedWarnings = 497;
+const expectedWarnings = 499;
 
 if (totalErrors === expectedErrors && totalWarnings === expectedWarnings) {
   console.log('Lint ran successfully.');
