@@ -68,12 +68,14 @@ Because of a [bug in Sass-Lint](https://github.com/sasstools/sass-lint/issues/11
 * Less error proned especially during refactoring (due to lack of `{}`)
 * Faster to write due removal of `{}` and `;`( which can cause errors)
 * Easier to read as it forces all files to look the same
+* Better for writing rules and nested rules
 
 **Benefits of SCSS over Sass:**
 
 * All valid CSS files are valid SCSS files
 * Allows for variety of control for how to display or structure rules (particularly useful for tabular-like data in rules)
-
+* Better for long or heavily nested lists/maps
+* More familiar for beginners
 
 **Benefits of Sass or SCSS over CSS:**
 
