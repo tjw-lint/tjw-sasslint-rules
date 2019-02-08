@@ -168,6 +168,7 @@ rules:
         # Text treatment
         - color
         - direction
+        - font
         - font-family
         - font-size
         - -webkit-font-smoothing
