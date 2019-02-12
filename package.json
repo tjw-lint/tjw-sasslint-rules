@@ -1,6 +1,6 @@
 {
   "name": "tjw-sasslint-rules",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "The Jared Wilcurt's Sass linting rules",
   "main": "index.js",
   "scripts": {
