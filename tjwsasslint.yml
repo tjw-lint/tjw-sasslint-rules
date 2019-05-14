@@ -1,6 +1,10 @@
-#########################
-## TJW Sass Lint File
-#########################
+####################################
+## TheJaredWilcurt Sass-Lint Rules
+####################################
+## Designed with Sass-Lint in mind:
+## github.com/sasstools/sass-lint
+####################################
+
 # Linter Options
 options:
   # Don't merge default rules
@@ -8,61 +12,91 @@ options:
   # Raise an error if more than 50 warnings are generated
   max-warnings: 50
   formatter: json
+
 # File Options
 files:
   ignore:
     - 'node_modules/**'
+  # Uncomment the include if not defined via CLI
   # include: 'src/**/*.s+(a|c)ss'
+
 # Rule Configuration
 rules:
+  # Error if attributes are missing quotes. [type="checkbox"] instead of [type=checkbox]
   attribute-quotes: 2
+  # Error if curly braces are on same line, require block content to have 1 level of indentation
   brace-style:
     - 2
     - allow-single-line: false
       style: '1tbs'
+  # Error if your nesting comes before the properties in a rule
   declarations-before-nesting: 2
+  # Error if using parens in mixin definitions or calls when not needed
   empty-args:
     - 2
     - include: false
+  # Extends must be at the top of a rule (before mixins, properties, and nesting)
   extends-before-declarations: 2
   extends-before-mixins: 2
+  # Make sure there is at least 1 empty line at the end of all files to make git happy (CRLF/LF)
   final-newline:
     - 2
     - include: true
+  # Prefer short hex when possible. #F0A instead of #FF00AA
   hex-length:
     - 2
     - style: short
+  # All hex will be uppercase. #F0A instead of #F0a, #f0A, or #f0a
   hex-notation:
     - 2
     - style: uppercase
+  # Require all files use 4 spaces for indentation
   indentation:
     - 2
     - size: 4
+  # Require leading zeros. opacity: 0.4 instead of opacity: .4
   leading-zero:
     - 2
     - include: true
+  # Mixins must be at the top of a rule (after extends, before properties and nesting)
   mixins-before-declarations:
     - 2
     - exclude:
         - breakpoint
         - mq
+  # Warn if using $brandColor: red instead of $brandColor: #F00
   no-color-keywords: 1
+  # All colors must be defined as a Sass variable before actual usage. background: $brandColor instead of background: #F00
   no-color-literals: 1
+  # Warn if debugger found
   no-debug: 1
+  # Do not allow the same property multiple times in a rule
   no-duplicate-properties: 2
+  # Rules must contain properties or be removed
   no-empty-rulesets: 2
+  # Never use !important, you know better
   no-important: 2
+  # Warn if using you typo'd a hex value
   no-invalid-hex: 1
+  # Do not nest things without a need to
   no-mergeable-selectors: 2
+  # Warn about colour or backgorund
   no-misspelled-properties: 1
+  # div.thing and div#thing are not allowed, use .thing or #thing
+  # input[type="checkbox"] is allowed
   no-qualifying-elements:
    - 2
    - allow-element-with-attribute: true
      allow-element-with-class: false
      allow-element-with-id: false
+  # Warn if a line ends in a space
   no-trailing-whitespace: 1
+  # Warn if an @warn was left in
   no-warn: 1
+  # Requires @extend to use %placeholders
   placeholder-in-extend: 2
+  # Organize all properties into a logical hierarchy described below, warn if they are not in this order.
+  # Consistent propery ordering makes the codebase more predictable and improves GZip results
   property-sort-order:
     - 1
     - ignore-custom-properties: true
@@ -240,39 +274,53 @@ rules:
         - visibility
         - will-change
         - z-index
+  # Comma separated selectors should be on their own lines
   single-line-per-selector: 1
+  # Do not allow ! important, only !important
   space-after-bang:
     - 2
     - include: false
+  # Warn if no space after colon. color: $red instead of color:$red
   space-after-colon:
     - 1
     - include: true
+  # Warn if commas is not followed by space. rgb(0, 0, 0) instead of rgb(0,0,0)
   space-after-comma:
     - 1
     - include: true
+  # Warn if there are no spaces around an operator. width: 4px + 10px instead of width: 4px+10px
   space-around-operator:
     - 1
     - include: true
+  # Warn if there is no space before !. 200px !important instead of 200px!important
   space-before-bang:
     - 1
     - include: true
+  # Warn if no space before brace. .thing { instead of .thing{
   space-before-brace:
     - 1
     - include: true
+  # Warn if space occurs before color. color: $red instead of color : $red
   space-before-colon:
     - 1
     - include: false
+  # Warn if space between paren and arg. +MyMixin(100px) instead of +MyMixin( 100px )
   space-between-parens:
     - 1
     - include: false
+  # Warn if you leave off the last semi-colon in a rule (in SCSS)
   trailing-semicolon:
     - 1
     - include: true
+  # Warn if you are missing quotes in url. background: url('file.png') instead of background: url(file.png)
   url-quotes: 1
+  ## Warn if variables begin with underscore and are not camelCase. $mainContent instead of $_main-content
   variable-name-format:
     - 1
     - allow-leading-underscore: false
       convention: camelcase
+  # Warn if zero does not have a unit. margin: 0px instead of margin: 0
+  # This will infer intent to future devs and can be removed during uglification
   zero-unit:
     - 1
     - include: true
