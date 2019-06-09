@@ -6,7 +6,7 @@
 
 #### **From the makers of: [Scout-App](http://scout-app.io)**
 
-These linting rules are designed to be **very strict**. Much thought has been placed in every rule. This includes a strict ordering of CSS properties. However not every single CSS property is included in this ruleset. If you find you are using a CSS property that is not in the list, please create an issue on GitHub to report it and it will be added into the ruleset.
+These linting rules are designed to be **very strict**. Much thought has been placed in every rule. This includes a strict ordering of CSS properties. And I mean **every single CSS property** from W3C and MDN is included in this ruleset (***WAY*** more than SMACSS, Concentric, or Recess rulesets). If you find you are using a CSS property that is not in the list, please create an issue on GitHub to report it and it will be added into the ruleset.
 
 These linting rules work on both `.sass` and `.scss` files, though if you are using these rules, you should probably be using `.sass` files primarily as they are stricter by default and less error proned (see pros/cons below).
 
