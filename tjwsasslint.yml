@@ -140,6 +140,7 @@ rules:
         - grid-after
         - grid-area
         - grid-gap
+        - gap
         - grid-template
         - grid-template-areas
         - grid-template-columns
@@ -237,7 +238,9 @@ rules:
         - font-family
         - font-size
         - font-size-adjust
+        - osx-font-smoothing
         - -webkit-font-smoothing
+        - -moz-osx-font-smoothing
         - font-smoothing
         - font-stretch
         - font-style
@@ -260,6 +263,8 @@ rules:
         - text-decoration
         - text-decoration-color
         - text-decoration-line
+        - text-decoration-skip
+        - text-decoration-skip-ink
         - text-decoration-style
         - text-emphasis
         - text-emphasis-color
@@ -273,7 +278,9 @@ rules:
         - text-overflow-mode
         - text-rendering
         - text-shadow
+        - text-size-adjust
         - text-transform
+        - text-underline-position
         - text-wrap
         - unicode-bidi
         - unicode-range
@@ -282,6 +289,7 @@ rules:
         - word-spacing
         - word-wrap
         # Less common properties go to the bottom
+        - all
         - animation
         - animation-name
         - animation-duration
@@ -291,10 +299,18 @@ rules:
         - animation-direction
         - animation-fill-mode
         - animation-play-state
+        - -moz-appearance
+        - -webkit-appearance
         - appearance
         - backface-visibility
+        - block-size
+        - box-decoration-break
         - box-shadow
         - box-sizing
+        - break-before
+        - break-inside
+        - break-after
+        - caret-color
         - clear
         - clip
         - counter-reset
@@ -304,6 +320,8 @@ rules:
         - fill
         - filter
         - float
+        - -ms-interpolation-mode
+        - image-rendering
         - marks
         - mix-blend-mode
         - nav-index
@@ -321,6 +339,7 @@ rules:
         - overflow-wrap
         - overflow-x
         - overflow-y
+        - pad
         - page
         - perspective
         - perspective-origin
