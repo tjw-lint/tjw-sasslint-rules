@@ -34,6 +34,7 @@
   "devDependencies": {
     "node-sass": "4.x.x",
     "sass-lint": "1.x.x",
-    "sass-lint-auto-fix": "0.x.x"
+    "sass-lint-auto-fix": "0.x.x",
+    "yamljs": "^0.3.0"
   }
 }

@@ -7,8 +7,11 @@
 
 const path = require('path');
 const exec = require('child_process').execSync;
+const yaml = require('yamljs');
 
 
+
+let testPassed = true;
 
 
 
@@ -78,9 +81,8 @@ results.forEach(function (result) {
 const expectedErrors = 184;
 const expectedWarnings = 500;
 
-if (totalErrors === expectedErrors && totalWarnings === expectedWarnings) {
-  console.log('Lint ran successfully.');
-} else {
+if (totalErrors !== expectedErrors || totalWarnings !== expectedWarnings) {
+  testPassed = false;
   let message = [
     'Sass-Lint results discrepancy.',
     '  ERRORS:',
@@ -92,5 +94,31 @@ if (totalErrors === expectedErrors && totalWarnings === expectedWarnings) {
   ].join('\n');
   console.log(message);
 
+}
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+
+const tjwSassLintRules = yaml.load('tjwsasslint.yml');
+const propertySortOrder = tjwSassLintRules.rules['property-sort-order'][1].order;
+const duplicatePropertiesRemoved = new Set(propertySortOrder);
+
+if (propertySortOrder.length !== duplicatePropertiesRemoved.size) {
+  console.log('Property Sort Order contains duplicates');
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+if (testPassed) {
+  console.log('Lint ran successfully.');
+} else {
   throw 'TEST FAILED';
 }
