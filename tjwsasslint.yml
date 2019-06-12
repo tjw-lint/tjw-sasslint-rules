@@ -373,6 +373,7 @@ rules:
         - backface-visibility
         - block-size
         - min-block-size
+        - -webkit-box-decoration-break
         - box-decoration-break
         - box-shadow
         - box-sizing
