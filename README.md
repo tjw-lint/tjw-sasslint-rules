@@ -6,9 +6,36 @@
 
 #### **From the makers of: [Scout-App](http://scout-app.io)**
 
-These linting rules are designed to be **very strict**. Much thought has been placed in every rule. This includes a strict ordering of CSS properties. And I mean **every single CSS property** from W3C and MDN is included in this ruleset (***WAY*** more than SMACSS, Concentric, or Recess rulesets). If you find you are using a CSS property that is not in the list, please create an issue on GitHub to report it and it will be added into the ruleset.
+These linting rules are designed to be **very strict**. Much thought has been placed in every rule, and a comment has been added over each explaining what it does. The rules work on both `.sass` and `.scss` files, though if you are using these rules, you should probably be using `.sass` files primarily as they are stricter by default and less error proned (see pros/cons at the bottom). These rules include a strict ordering of CSS properties, detailed below.
 
-These linting rules work on both `.sass` and `.scss` files, though if you are using these rules, you should probably be using `.sass` files primarily as they are stricter by default and less error proned (see pros/cons below).
+
+* * *
+
+
+**Property Sort Order**:
+
+The order by which you sort properties matters for consistency, predictability, and compression (gzip). I have carefully analyzed the most popular approaches, found their flaws, and improved on them.
+
+* **Improvements made:**
+  * Include all known CSS properties supported by, or intended to be supported by, current major browsers. Meaning **every single CSS property** from W3C and MDN.
+  * Only include modern (2019) vendor prefixes - Desktop: Chrome/FF/Safari/Edge/IE11, Android: Chrome/FF, iOS: Safari
+  * Outdated/deprecated properties - Old vendor prefixes that are not required anymore, or deprecated CSS properties no longer supported by any browser are not included in my set.
+  * Out-of-order - In my set vendor prefixes always occur on the line prio to their native counterparts.
+  * No dupes! - A duplicate property introduces confusion for the linter and the developer. I have an automated test to insure no dupes ever enter this set.
+  * Consensus and versioning - There is only one official version of these rules. There are no competing versions of the TJW ruleset. It is versioned on GitHub.
+
+For the purposes of linting, the more properties you have documented the better.
+
+Rule Set    | Amount of properties | Dupes
+:--         | --:                  | :--:
+TJW         | 456                  | 0
+SMACSS      | 201                  | 2
+Concentric  | 170                  | ?
+Recess      | 161                  | 0
+
+(`?` - It is hard to denote dupes as there are competing versions of Concentric)
+
+If you find you are using a CSS property that is not in the list, please create an issue on GitHub to report it and it will be added into the ruleset.
 
 
 * * *
