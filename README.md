@@ -16,13 +16,13 @@ These linting rules are designed to be **very strict**. Much thought has been pl
 
 The order by which you sort properties matters for consistency, predictability, and compression (gzip). I have carefully analyzed the most popular approaches, found their flaws, and improved on them.
 
-* **Improvements made:**
-  * Include all known CSS properties supported by, or intended to be supported by, current major browsers. Meaning **every single CSS property** from W3C and MDN.
-  * Only include modern (2019) vendor prefixes - Desktop: Chrome/FF/Safari/Edge/IE11, Android: Chrome/FF, iOS: Safari
-  * Outdated/deprecated properties - Old vendor prefixes that are not required anymore, or deprecated CSS properties no longer supported by any browser are not included in my set.
-  * Out-of-order - In my set vendor prefixes always occur on the line prio to their native counterparts.
-  * No dupes! - A duplicate property introduces confusion for the linter and the developer. I have an automated test to insure no dupes ever enter this set.
-  * Consensus and versioning - There is only one official version of these rules. There are no competing versions of the TJW ruleset. It is versioned on GitHub.
+* **Improvements made over SMACSS/Recess/Concentric:**
+  * **Be comprehensive**: I've included all CSS properties supported by (or intended to be supported by) current major browsers. Meaning **every single CSS property** from W3C and MDN.
+  * **Include Vendor-Prefixes**: I only include modern (2019) vendor prefixes - Desktop: Chrome/FF/Safari/Edge/IE11, Android: Chrome/FF, iOS: Safari
+  * **Remove Outdated/deprecated properties**: Old vendor prefixes that are not required anymore, or deprecated CSS properties no longer supported by any browser are not included in my set.
+  * **Out-of-order errors**: In my set vendor-prefixes always occur on the line prior to their native counterparts.
+  * **No dupes!**: A duplicate property introduces confusion for the linter and the developer. I have an automated test to insure no dupes ever enter this set.
+  * **Consensus and versioning**: There is only one official version of these rules. There are no competing versions of the TJW ruleset. It is versioned on GitHub and npm.
 
 For the purposes of linting, the more properties you have documented the better.
 
