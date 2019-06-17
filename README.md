@@ -22,7 +22,7 @@ The order by which you sort properties matters for consistency, predictability, 
   * **Remove Outdated/deprecated properties**: Old vendor prefixes that are not required anymore, or deprecated CSS properties no longer supported by any browser are not included in my set.
   * **Out-of-order errors**: In my set vendor-prefixes always occur on the line prior to their native counterparts.
   * **No dupes!**: A duplicate property introduces confusion for the linter and the developer. I have an automated test to insure no dupes ever enter this set.
-  * **Consensus and versioning**: There is only one official version of these rules. There are no competing versions of the TJW ruleset. It is versioned on GitHub and npm.
+  * **Consensus and versioning**: There is only one official version of these rules. There are no competing versions of the TJW ruleset. It is versioned on GitHub and published to npm.
 
 For the purposes of linting, the more properties you have documented the better.
 
