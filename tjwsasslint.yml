@@ -432,8 +432,8 @@ rules:
         - counter-increment
         - cursor
         - fallback
-        - -webkit-filter
         - fill
+        - -webkit-filter
         - filter
         - float
         - image-orientation
