@@ -96,11 +96,40 @@ Because of a [bug in Sass-Lint](https://github.com/sasstools/sass-lint/issues/11
 * Faster to write due removal of `{}` and `;`( which can cause errors)
 * Easier to read as it forces all files to look the same
 * Better for writing rules and nested rules
+  ```sass
+  .animals
+      +myMixin
+      border: 1px solid $myColor
+      margin: 10px
+      padding: 5px
+      .kitten
+          background: $myColor
+          font-family: $secondaryFont
+          font-size: $fontSizeMedium
+          text-align: center
+  ```
 
 **Benefits of SCSS over Sass:**
 
 * All valid CSS files are valid SCSS files
 * Allows for variety of control for how to display or structure rules (particularly useful for tabular-like data in rules)
+  ```scss
+  .icon {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-image: url('sprite-sheet.png');
+  }
+  .icon-bat { background-position:   0px   0px; }
+  .icon-cat { background-position:   0px -16px; }
+  .icon-cow { background-position:   0px -32px; }
+  .icon-dog { background-position: -16px   0px; }
+  .icon-pig { background-position: -16px -16px; }
+  .icon-rat { background-position: -16px -32px; }
+  .icon-bee { background-position: -32px   0px; }
+  .icon-ant { background-position: -32px -16px; }
+  .icon-ape { background-position: -32px -32px; }
+  ```
 * Better for long or heavily nested lists/maps
 * More familiar for beginners
 
