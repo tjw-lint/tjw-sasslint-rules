@@ -1,6 +1,6 @@
 # TJW-SassLint-Rules
 
-[![Build Status](https://travis-ci.org/TheJaredWilcurt/tjw-sasslint-rules.svg?branch=master)](https://travis-ci.org/TheJaredWilcurt/tjw-sasslint-rules)
+[![Build Status](https://travis-ci.org/tjw-lint/tjw-sasslint-rules.svg?branch=master)](https://travis-ci.org/tjw-lint/tjw-sasslint-rules)
 
 ### *The Jared Wilcurt's very aggressive Sass Linting rules for obsessives.*
 
@@ -10,6 +10,11 @@ These linting rules are designed to be **very strict**. Much thought has been pl
 
 
 * * *
+
+
+## Why should I use this?
+
+Much care and thought has gone into every rule, and each has been documented. This rule set is **by far** the most comprehensive currently in existence. Take, for example, the "property sort order" detailed below:
 
 
 **Property Sort Order**:
@@ -43,21 +48,9 @@ If you find you are using a CSS property that is not in the list, please create 
 
 ## How to use this:
 
-### Linux/OSX Instructions
+### Cross-Platform Instructions
 
 1. `npm install --save-dev tjw-sasslint-rules sass-lint sass-lint-auto-fix node-sass`
-1. In the `"scripts":` section of your `package.json` add in these two lines:
-   * `"sasslint": "sass-lint -c node_modules/tjw-sasslint-rules/tjwsasslint.yml '**/*.sass, **/*.scss' -v -f table",`
-   * `"sassfix": "sass-lint-auto-fix '**/*.sass, **/*.scss' -c node_modules/tjw-sasslint-rules/tjwsasslint.yml"`
-   * **Note:** You can change the `'**/*.sass, **/*.scss'` to be specific to your project's Sass folder. Example: `'src/sass/**/*.sass, src/sass/**/*.scss'`
-1. `npm run sassfix` - This will automatically fix anything it can in accordance with the rules
-1. `npm run sasslint` - This will show you the remaining lines of code in violation of the linting rules for you to manually correct.
-
-
-### Windows Instructions
-
-Because of a [bug in Sass-Lint](https://github.com/sasstools/sass-lint/issues/1192), Windows machines cannot pass in the location of their Sass files in the CLI. The only work around is to set the value in a `yml` file.
-
 1. Create a file called `.sass-lint.yml` and set it up like so:
    ```yml
    options:
@@ -66,7 +59,6 @@ Because of a [bug in Sass-Lint](https://github.com/sasstools/sass-lint/issues/11
      # Note: You can change the '**/*.s+(a|c)ss' to be specific to your project's Sass folder. Example: 'src/sass/**/*.s+(a|c)ss'
      include: '**/*.s+(a|c)ss'
    ```
-1. `npm install --save-dev tjw-sasslint-rules sass-lint sass-lint-auto-fix node-sass`
 1. In the `"scripts":` section of your `package.json` add in these two lines:
    * `"sasslint": "sass-lint -c .sass-lint.yml -v -f table",`
    * `"sassfix": "sass-lint-auto-fix -c .sass-lint.yml"`
@@ -95,7 +87,7 @@ Because of a [bug in Sass-Lint](https://github.com/sasstools/sass-lint/issues/11
 * Less error proned especially during refactoring (due to lack of `{}`)
 * Faster to write due removal of `{}` and `;`( which can cause errors)
 * Easier to read as it forces all files to look the same
-* Better for writing rules and nested rules
+* Better for writing rules and nested rules (90+% of your style codebase, most likely)
   ```sass
   .animals
       +myMixin
@@ -131,14 +123,14 @@ Because of a [bug in Sass-Lint](https://github.com/sasstools/sass-lint/issues/11
   .icon-ape { background-position: -32px -32px; }
   ```
 * Better for long or heavily nested lists/maps
-* More familiar for beginners
+* More familiar for beginners (though beginners tend to have little to no trouble learning the .sass syntax)
 
 **Benefits of Sass or SCSS over CSS:**
 
 * Automatic concatenation and minification on save
 * Modular/Reusable code
 * Nesting (possibly coming to native CSS in the future)
-* Precomputed Variables (Live variables already exist in Sass/SCSS/CSS)
+* Precomputed Variables (Live variables already exist in Sass/SCSS/CSS via custom properties)
 * Mixins and Mixin Libraries (See: [family.scss](https://lukyvj.github.io/family.scss/) for a good example)
 * Precomputed Math (`width: $height / 2;`)
 * Built in color functions (`color: desaturate(#F00, 20%);` or `color: rgba(#FCE, 0.5);`)
