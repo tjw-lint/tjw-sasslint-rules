@@ -1,6 +1,6 @@
 # TJW-SassLint-Rules
 
-[![Build Status](https://travis-ci.org/TheJaredWilcurt/tjw-sasslint-rules.svg?branch=master)](https://travis-ci.org/TheJaredWilcurt/tjw-sasslint-rules)
+[![Build Status](https://travis-ci.org/tjw-lint/tjw-sasslint-rules.svg?branch=master)](https://travis-ci.org/tjw-lint/tjw-sasslint-rules)
 
 ### *The Jared Wilcurt's very aggressive Sass Linting rules for obsessives.*
 
