@@ -350,6 +350,10 @@ rules:
         - text-combine-upright
         - -webkit-text-decoration
         - text-decoration
+        - -webkit-text-decoration-width
+        - text-decoration-width
+        - -webkit-text-decoration-thickness
+        - text-decoration-thickness
         - -webkit-text-decoration-color
         - text-decoration-color
         - -webkit-text-decoration-line
