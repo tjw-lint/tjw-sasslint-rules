@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/TheJaredWilcurt/tjw-sasslint-rules#readme",
   "devDependencies": {
-    "node-sass": "4.x.x",
+    "node-sass": "7.x.x",
     "sass-lint": "1.x.x",
     "sass-lint-auto-fix": "0.x.x",
     "yamljs": "^0.3.0"
